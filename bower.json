@@ -1,0 +1,45 @@
+{
+  "name": "calcite-maps-custom-dojo-build",
+  "version": "0.0.1",
+  "homepage": "https://github.com/crackernutter/esricalcitedojo",
+  "authors": [
+    "Allan Laframboise <alaframboise@esri.com>",
+	"Jay Gregory <jay.gregory@codefry.com>"
+  ],
+  "description": "Utility for making custom dojo builds using the Calcite Theme",
+  "main": [
+    "lib/fonts",
+	"lib/js",
+	"lib/sass",
+	"src/app"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "Esri",
+    "ArcGIS",
+    "Map",
+    "Map App",
+    "Calcite",
+    "Bootstrap",
+    "Calcite-Bootstrap",
+    "Calcite-Maps"
+  ],
+  "license": "Apache2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests",
+    "gruntfile.js",
+    "app"
+  ],
+  "dependencies": {
+    "dojo-bootstrap": "~3.0.2",
+    "esri": "arcgis-js-api#3.16.0"
+  },
+  "resolutions": {
+    "dojo": "v1.10.4/esri-3.14.0"
+  }
+}

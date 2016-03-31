@@ -12,7 +12,7 @@ The second component is from [calcite-maps] (https://github.com/Esri/calcite-map
 * [grunt](http://gruntjs.com/)
 * [java 7 or greater](https://java.com/en/download/) - for [Closure Compiler](https://github.com/google/closure-compiler) used during build
 
-# Usage
+### Usage
 * `npm install -g bower` - installs bower
 * `npm install -g grunt-cli` - installs global grunt
 * `npm install` - installs required node and bower packages
@@ -21,7 +21,7 @@ The second component is from [calcite-maps] (https://github.com/Esri/calcite-map
 
 ###Getting Started<a id="getting-started"></a>
 
-1. Make sure you have all your requirements from above installed
+1. Make sure you have all requirements from above installed
 
 2. Fork or clone the repo
 
@@ -36,6 +36,3 @@ The second component is from [calcite-maps] (https://github.com/Esri/calcite-map
 ###Issues
 
 Currently the CDN versions the Calcite Theme css files (esri.css and calcite.css) produce more desirable results than the built versions from the Bower package.  The html template included here uses the CDN versions.  
-
-
-

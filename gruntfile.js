@@ -24,11 +24,11 @@ module.exports = function (grunt) {
 			expanded : {
 				files : {
 					'src/css/calcite-maps-bootstrap.css' : 'node_modules/calcite-maps/lib/sass/build.scss',
-					'src/css/themes/inline-zoom.css' : 'node_modules/calcite-maps/lib/sass/themes/inline-zoom.scss',
-					'src/css/themes/jumbo-title.css' : 'node_modules/calcite-maps/lib/sass/themes/jumbo-title.scss',
-					'src/css/apis/arcgis-3.x.css' : 'node_modules/calcite-maps/lib/sass/apis/arcgis-3.x.scss',
-					'src/css/apis/arcgis-4.x.css' : 'node_modules/calcite-maps/lib/sass/apis/arcgis-4.x.scss',
-					'src/css/apis/esri-leaflet.css' : 'node_modules/calcite-maps/lib/sass/apis/esri-leaflet.scss'
+					'src/css/themes/inline-zoom.css' : 'node_modules/calcite-maps/lib/sass/layouts/inline-zoom.scss',
+					'src/css/themes/jumbo-title.css' : 'node_modules/calcite-maps/lib/sass/layouts/jumbo-title.scss',
+					'src/css/apis/arcgis-3.x.css' : 'node_modules/calcite-maps/lib/sass/api-support/arcgis-3.x.scss',
+					'src/css/apis/arcgis-4.x.css' : 'node_modules/calcite-maps/lib/sass/api-support/arcgis-4.x.scss',
+					'src/css/apis/esri-leaflet.css' : 'node_modules/calcite-maps/lib/sass/api-support/esri-leaflet.scss'
 				}
 			}
 		},

@@ -7,7 +7,7 @@
     "grunt-cli": "^0.1.13"
   },
   "devDependencies": {
-	"calcite-bootstrap": "^0.3.2",
+	"calcite-bootstrap": "#0.2.9",
     "calcite-maps": "esri/calcite-maps",
     "grunt": "^0.4.5",
     "grunt-browser-sync": "^2.2.0",

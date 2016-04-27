@@ -21,8 +21,9 @@ require(["esri/map",
 	//map.popup.anchor = "top";
 
 	// Search
-	map.on('layer-add-result', initSearch);
+	map.on('load', initSearch);
 	function initSearch(layer) {
+		console.log("initing search");
 		searchDivNav = createSearchWidget("searchNavDiv");
 		searchWidgetPanel = createSearchWidget("searchPanelDiv");
 	}

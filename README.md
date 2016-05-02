@@ -29,10 +29,6 @@ The second component is from [calcite-maps] (https://github.com/Esri/calcite-map
 
 4. Modify index.html and the main.js and app.css in src/app to build out your application
 
-5. Use `npm build` to build dojo, minify your JavaScript, and copy necessary files to your dist folder 
+5. Use `npm run build` to build dojo, minify your JavaScript, and copy necessary files to your dist folder 
 
 6. Deploy your app
-
-###Issues
-
-Currently the CDN versions the Calcite Theme css files (esri.css and calcite.css) produce more desirable results than the built versions from the Bower package.  The html template included here uses the CDN versions.  

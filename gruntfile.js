@@ -22,7 +22,7 @@ module.exports = function (grunt) {
 			},
 			expanded : {
 				files : {
-					'src/css/calcite-maps-bootstrap.css' : 'node_modules/calcite-maps/lib/sass/build.scss',
+					'src/css/calcite-maps-bootstrap.css' : 'node_modules/calcite-maps/lib/sass/build-all.scss',
 					'src/css/themes/inline-zoom.css' : 'node_modules/calcite-maps/lib/sass/layouts/inline-zoom.scss',
 					'src/css/themes/jumbo-title.css' : 'node_modules/calcite-maps/lib/sass/layouts/jumbo-title.scss',
 					'src/css/themes/mobile-focus.css': 'node_modules/calcite-maps/lib/sass/layouts/mobile-focus.scss',
@@ -30,6 +30,14 @@ module.exports = function (grunt) {
 					'src/css/apis/arcgis-4.x.css' : 'node_modules/calcite-maps/lib/sass/support/arcgis-4.x.scss',
 					'src/css/apis/esri-leaflet.css' : 'node_modules/calcite-maps/lib/sass/support/esri-leaflet.scss'
 				}
+			}
+		},
+		execute:{
+			download: {
+				options:{
+					args: ['src/css']
+				},
+				src: ['downloadResources.js']
 			}
 		},
 		// Minify CSS
@@ -43,19 +51,6 @@ module.exports = function (grunt) {
 					'src/css/calcite-maps-bootstrap-arcgis-3.x.min.css' : ['src/css/calcite-maps-bootstrap.css', 'src/css/themes/inline-zoom.css', 'src/css/themes/jumbo-title.css','src/css/themes/mobile-focus.css', 'src/css/apis/arcgis-3.x.css'],
 					'src/css/calcite-maps-bootstrap-arcgis-4.x.min.css' : ['src/css/calcite-maps-bootstrap.css', 'src/css/themes/inline-zoom.css', 'src/css/themes/jumbo-title.css','src/css/themes/mobile-focus.css', 'src/css/apis/arcgis-4.x.css'],
 					'src/css/calcite-maps-bootstrap-esri-leaflet.min.css' : ['src/css/calcite-maps-bootstrap.css', 'src/css/themes/inline-zoom.css', 'src/css/themes/jumbo-title.css','src/css/themes/mobile-focus.css', 'src/css/apis/esri-leaflet.css'],
-				}
-			},
-			prod : {
-				options : {
-					banner : banner
-				},
-				files : {
-					'dist/app/app.css' : ['src/app/app.css'],
-					//really only need the version you are using....
-					'dist/css/calcite-maps-bootstrap.min.css' : ['src/css/calcite-maps-bootstrap.min.css'],
-					'dist/css/calcite-maps-bootstrap-arcgis-3.x.min.css' : ['src/css/calcite-maps-bootstrap-arcgis-3.x.min.css'],
-					'dist/css/calcite-maps-bootstrap-arcgis-4.x.min.css' : ['src/css/calcite-maps-bootstrap-arcgis-4.x.min.css'],
-					'dist/css/calcite-maps-bootstrap-esri-leaflet.min.css' : ['src/css/calcite-maps-bootstrap-esri-leaflet.min.css']
 				}
 			}
 		},
@@ -95,13 +90,13 @@ module.exports = function (grunt) {
 				dest : './src/js/jquery'
 			},
 			//An error in dojo.js for v3.16 of the esri api necessitates this directory to be copied out of the src directory to the root
-			/*this error is handled in the buildprofile but for the src this grunt task is needed
+			//this error is handled in the buildprofile but for the src this grunt task is needed
 			moment : {
 				expand: true,
 				cwd: './src/moment/',
 				src: ['**'],
 				dest: './moment/'
-			},*/
+			},
 			main : {
 				files : [{
 						expand : true,
@@ -146,7 +141,7 @@ module.exports = function (grunt) {
 	});
 	// Default task
 	//add copy:moment to devbuild task if your app throws a moment.js error
-	grunt.registerTask('devbuild', ['sass', 'cssmin:dev', 'copy:calcitedojo', 'copy:calcitejquery', 'copy:bootstrapfontsdev']);
+	grunt.registerTask('devbuild', ['sass', 'cssmin:dev','execute:download', 'copy:calcitedojo', 'copy:calcitejquery', 'copy:bootstrapfontsdev', 'copy:moment']);
 	//Build production app
-	grunt.registerTask('default', ['clean:build', 'clean:moment', 'dojo', 'cssmin:prod', 'copy:bootstrapfontsprod', 'copy:calcitefonts', 'copy:main', 'clean:uncompressed']);
+	grunt.registerTask('default', ['clean:build', 'clean:moment', 'dojo', 'copy:bootstrapfontsprod', 'copy:calcitefonts', 'copy:main', 'clean:uncompressed']);
 };

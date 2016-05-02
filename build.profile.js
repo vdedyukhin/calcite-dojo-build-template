@@ -36,6 +36,7 @@ var profile = {
     // 'app' is a sample path for your application
     // set this accordingly
     'app',
+	'css',
     'dijit',
     'dojo',
     'dojox',

@@ -22,10 +22,12 @@ module.exports = function (grunt) {
 			},
 			expanded : {
 				files : {
-					'src/css/calcite-maps-bootstrap.css' : 'node_modules/calcite-maps/lib/sass/build-all.scss',
+					'src/css/calcite-bootstrap.css':'node_modules/calcite-maps/lib/sass/build-calcite-bootstrap.scss',
+					'src/css/calcite-maps.css':'node_modules/calcite-maps/lib/sass/build-calcite-maps.scss',
+					'src/css/calcite-bootstrap-maps.css' : 'node_modules/calcite-maps/lib/sass/build-all.scss',
 					'src/css/themes/inline-zoom.css' : 'node_modules/calcite-maps/lib/sass/layouts/inline-zoom.scss',
-					'src/css/themes/jumbo-title.css' : 'node_modules/calcite-maps/lib/sass/layouts/jumbo-title.scss',
-					'src/css/themes/mobile-focus.css': 'node_modules/calcite-maps/lib/sass/layouts/mobile-focus.scss',
+					'src/css/themes/large-title.css' : 'node_modules/calcite-maps/lib/sass/layouts/large-title.scss',
+					'src/css/themes/medium-title.css': 'node_modules/calcite-maps/lib/sass/layouts/medium-title.scss',
 					'src/css/apis/arcgis-3.x.css' : 'node_modules/calcite-maps/lib/sass/support/arcgis-3.x.scss',
 					'src/css/apis/arcgis-4.x.css' : 'node_modules/calcite-maps/lib/sass/support/arcgis-4.x.scss',
 					'src/css/apis/esri-leaflet.css' : 'node_modules/calcite-maps/lib/sass/support/esri-leaflet.scss'
@@ -47,10 +49,12 @@ module.exports = function (grunt) {
 					banner : banner
 				},
 				files : {
-					'src/css/calcite-maps-bootstrap.min.css' : ['src/css/calcite-maps-bootstrap.css'],
-					'src/css/calcite-maps-bootstrap-arcgis-3.x.min.css' : ['src/css/calcite-maps-bootstrap.css', 'src/css/themes/inline-zoom.css', 'src/css/themes/jumbo-title.css','src/css/themes/mobile-focus.css', 'src/css/apis/arcgis-3.x.css'],
-					'src/css/calcite-maps-bootstrap-arcgis-4.x.min.css' : ['src/css/calcite-maps-bootstrap.css', 'src/css/themes/inline-zoom.css', 'src/css/themes/jumbo-title.css','src/css/themes/mobile-focus.css', 'src/css/apis/arcgis-4.x.css'],
-					'src/css/calcite-maps-bootstrap-esri-leaflet.min.css' : ['src/css/calcite-maps-bootstrap.css', 'src/css/themes/inline-zoom.css', 'src/css/themes/jumbo-title.css','src/css/themes/mobile-focus.css', 'src/css/apis/esri-leaflet.css'],
+					'src/css/calcite-maps.min.css':['src/css/calcite-maps.css'],
+					'src/css/calcite-bootstrap.min.css':['src/css/calcite-bootstrap.css'],
+					'src/css/calcite-bootstrap-maps.min.css' : ['src/css/calcite-bootstrap-maps.css'],
+					'src/css/calcite-maps-bootstrap-arcgis-3.x.min.css' : ['src/css/calcite-maps.css', 'src/css/themes/inline-zoom.css', 'src/css/themes/large-title.css','src/css/themes/medium.css', 'src/css/apis/arcgis-3.x.css'],
+					'src/css/calcite-maps-bootstrap-arcgis-4.x.min.css' : ['src/css/calcite-maps.css', 'src/css/themes/inline-zoom.css', 'src/css/themes/large-title.css','src/css/themes/medium.css', 'src/css/apis/arcgis-4.x.css'],
+					'src/css/calcite-maps-bootstrap-esri-leaflet.min.css' : ['src/css/calcite-maps.css', 'src/css/themes/inline-zoom.css', 'src/css/themes/large-title.css','src/css/themes/medium-focus.css', 'src/css/apis/esri-leaflet.css'],
 				}
 			}
 		},

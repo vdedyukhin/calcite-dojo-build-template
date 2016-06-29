@@ -34,5 +34,6 @@ The second component is from [calcite-maps] (https://github.com/Esri/calcite-map
 6. Deploy your app
 
 ###Issues
+Esri's Calcite design is under active development.  The classes and filenames are consistently changing, which often breaks this repository.  I've had to fix it several times since first release.  I'll try to bring it in line periodically, but it might be hard to keep up, so feel free to just fix the errors, which generally occur in the sass filenames or the classes in index.html. 
 
 Currently the CDN versions the Calcite Theme css files (esri.css and calcite.css) produce more desirable results than the built versions from the Bower package.  I have included a node script to download the 3.16 versions of those css files to avoid pointing at the CDN versions.  

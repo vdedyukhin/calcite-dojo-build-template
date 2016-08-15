@@ -123,7 +123,7 @@ var profile = {
     'dojo-xhr-factory': 0,
 
     // We are not loading tests in production, so we can get rid of some test sniffing code.
-    'dojo-test-sniff': 0,
+     'dojo-test-sniff': 0,
     'extend-esri': 0,
 
     "config-deferredInstrumentation": 0,
@@ -158,6 +158,11 @@ var profile = {
       'extend-esri': 0,
       'dojo-has-api': 1,
       'dojo-undef-api': 0
-    }
+    },
+	packages: [{
+      name: 'moment',
+      location: 'moment',
+      main: 'moment'
+    }]
   }
 };

@@ -5,7 +5,7 @@
 var http = require('http');
 var fs = require('fs');
 
-var resources = ["http://js.arcgis.com/3.16/esri/themes/calcite/dijit/calcite.css","http://js.arcgis.com/3.16/esri/themes/calcite/esri/esri.css"];
+var resources = ["http://js.arcgis.com/3.17/esri/themes/calcite/dijit/calcite.css","http://js.arcgis.com/3.17/esri/themes/calcite/esri/esri.css"];
 
 var destination = process.argv[2];
 if(!fs.existsSync(destination)){
